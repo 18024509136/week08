@@ -1,0 +1,59 @@
+spring:
+  shardingsphere:
+    # 配置逻辑数据源
+    datasource:
+      names: ds202101,ds202102,ds202103,ds202104
+      ds202101:
+        type: com.alibaba.druid.pool.DruidDataSource
+        driver-class-name: com.mysql.jdbc.Driver
+        url: jdbc:mysql://localhost:3306/ds_202101?characterEncoding=utf8&useUnicode=true&useSSL=false&serverTimezone=UTC
+        username: root
+        password: 123456
+      ds202102:
+        type: com.alibaba.druid.pool.DruidDataSource
+        driver-class-name: com.mysql.jdbc.Driver
+        url: jdbc:mysql://localhost:3306/ds_202102?characterEncoding=utf8&useUnicode=true&useSSL=false&serverTimezone=UTC
+        username: root
+        password: 123456
+      ds202103:
+        type: com.alibaba.druid.pool.DruidDataSource
+        driver-class-name: com.mysql.jdbc.Driver
+        url: jdbc:mysql://localhost:3306/ds_202103?characterEncoding=utf8&useUnicode=true&useSSL=false&serverTimezone=UTC
+        username: root
+        password: 123456
+      ds202104:
+        type: com.alibaba.druid.pool.DruidDataSource
+        driver-class-name: com.mysql.jdbc.Driver
+        url: jdbc:mysql://localhost:3306/ds_202104?characterEncoding=utf8&useUnicode=true&useSSL=false&serverTimezone=UTC
+        username: root
+        password: 123456
+    # 配置分片规则
+    sharding:
+      tables:
+        order_info:
+          # 配置数据节点，{a..b}表示数字a一直递增到数字b，[a,b,c,d]表示只有a b c d 固定的4个值
+          # 这里展开的逻辑数据库有ds202101、ds202102、ds202103、ds202104，每个逻辑数据库下都有后缀为0到15的order_info_n表（n表示后缀）
+          actual-data-nodes: ds$->{2021..2021}$->{['01','02','03','04']}.order_info_$->{0..15}
+          database-strategy:
+            standard:
+              # 根据创建时间分库
+              sharding-column: create_time
+              # 指定分库sharding类
+              precise-algorithm-class-name: com.geek.shardingtest.DatabaseSharding
+              range-algorithm-class-name: com.geek.shardingtest.DatabaseSharding
+          table-strategy:
+            standard:
+              # 根据用户分表
+              sharding-column: user_id
+              # 指定分表sharding类
+              precise-algorithm-class-name: com.geek.shardingtest.TableSharding
+          # 指定主键生成规则
+          key-generator:
+            column: order_no
+            type: SNOWFLAKE
+            props:
+              worker.id: 1
+              max.tolerate.time.difference.milliseconds: 2
+    props:
+      sql:
+        show: true
