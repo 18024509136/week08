@@ -14,4 +14,13 @@
 - 库存服务为hmily-demo-inventory模块，核心代码为com.geek.hmilydemo.InventoryServiceImpl
 - 账户服务为hmily-demo-account模块，核心代码为com.geek.hmilydemo.AccountServiceImpl
 - 注册中心服务为hmily-demo-eureka模块
+  
+测试url：http://localhost:8081/order/test  
+请求体为：
+{  
+    "count": 1,  
+    "productId": 10,  
+    "totalAmount": 100,  
+    "userId": 1  
+}  
 
