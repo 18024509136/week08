@@ -8,8 +8,8 @@
 - 测试方法均在测试目录src/test/java下的com.geek.shardingtest.ShardingTest
 
 ### 作业2 ###
-请查看hmily-demo项目  
-使用hmily分布式事务框架，处理下订单->减库存->扣账户余额分布式事务。分布式框架采用spring cloud。   
+请查看hmily-demo项目，为了简单演示，本地事务只做单纯的log操作，没有进行数据库的事务交互  
+使用hmily分布式事务框架，处理下订单->减库存->扣账户余额分布式事务。分布式框架采用spring cloud  
 - 订单服务为hmily-order模块，核心代码为com.geek.hmilydemo.OrderServiceImpl，是主事务入口，通过Feign接口AccountClient和InventoryClient分别访问库存服务和账户服务
 - 库存服务为hmily-demo-inventory模块，核心代码为com.geek.hmilydemo.InventoryServiceImpl
 - 账户服务为hmily-demo-account模块，核心代码为com.geek.hmilydemo.AccountServiceImpl
