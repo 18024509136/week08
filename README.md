@@ -15,7 +15,8 @@
 - 账户服务为hmily-demo-account模块，核心代码为com.geek.hmilydemo.AccountServiceImpl
 - 注册中心服务为hmily-demo-eureka模块
   
-测试url：http://localhost:8081/order/test  
+请求URL：http://localhost:8081/order/test  
+请求方式：POST  
 请求体为：
 {  
     "count": 1,  
