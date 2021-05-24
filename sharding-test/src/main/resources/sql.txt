@@ -1,0 +1,245 @@
+CREATE DATABASE ds_202101 CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci;
+CREATE DATABASE ds_202102 CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci;
+CREATE DATABASE ds_202103 CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci;
+CREATE DATABASE ds_202104 CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci;
+
+
+create table order_info_0
+(
+    order_no bigint not null default 0 comment '主键',
+    user_id bigint not null default 0 comment '用户ID',
+    user_addr_id varchar(15) not null default '' comment '地址ID',
+    pay_channel tinyint not null default 0 comment '支付方式',
+    total_num smallint not null default 0 comment '总数目',
+    total_amount int not null default 0 comment '总金额，单位分',
+    express_price int not null default 0 comment '运费，单位分',
+    status tinyint not null default 1 comment '支付状态，1：未支付 2：支付中 3：支付完成 4：关闭',
+    create_time datetime not null default CURRENT_TIMESTAMP comment '创建时间',
+    update_time datetime not null default CURRENT_TIMESTAMP comment '修改时间',
+    primary key (order_no)
+)ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+create table order_info_1
+(
+    order_no bigint not null default 0 comment '主键',
+    user_id bigint not null default 0 comment '用户ID',
+    user_addr_id varchar(15) not null default '' comment '地址ID',
+    pay_channel tinyint not null default 0 comment '支付方式',
+    total_num smallint not null default 0 comment '总数目',
+    total_amount int not null default 0 comment '总金额，单位分',
+    express_price int not null default 0 comment '运费，单位分',
+    status tinyint not null default 1 comment '支付状态，1：未支付 2：支付中 3：支付完成 4：关闭',
+    create_time datetime not null default CURRENT_TIMESTAMP comment '创建时间',
+    update_time datetime not null default CURRENT_TIMESTAMP comment '修改时间',
+    primary key (order_no)
+)ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+create table order_info_2
+(
+    order_no bigint not null default 0 comment '主键',
+    user_id bigint not null default 0 comment '用户ID',
+    user_addr_id varchar(15) not null default '' comment '地址ID',
+    pay_channel tinyint not null default 0 comment '支付方式',
+    total_num smallint not null default 0 comment '总数目',
+    total_amount int not null default 0 comment '总金额，单位分',
+    express_price int not null default 0 comment '运费，单位分',
+    status tinyint not null default 1 comment '支付状态，1：未支付 2：支付中 3：支付完成 4：关闭',
+    create_time datetime not null default CURRENT_TIMESTAMP comment '创建时间',
+    update_time datetime not null default CURRENT_TIMESTAMP comment '修改时间',
+    primary key (order_no)
+)ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+create table order_info_3
+(
+    order_no bigint not null default 0 comment '主键',
+    user_id bigint not null default 0 comment '用户ID',
+    user_addr_id varchar(15) not null default '' comment '地址ID',
+    pay_channel tinyint not null default 0 comment '支付方式',
+    total_num smallint not null default 0 comment '总数目',
+    total_amount int not null default 0 comment '总金额，单位分',
+    express_price int not null default 0 comment '运费，单位分',
+    status tinyint not null default 1 comment '支付状态，1：未支付 2：支付中 3：支付完成 4：关闭',
+    create_time datetime not null default CURRENT_TIMESTAMP comment '创建时间',
+    update_time datetime not null default CURRENT_TIMESTAMP comment '修改时间',
+    primary key (order_no)
+)ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+create table order_info_4
+(
+    order_no bigint not null default 0 comment '主键',
+    user_id bigint not null default 0 comment '用户ID',
+    user_addr_id varchar(15) not null default '' comment '地址ID',
+    pay_channel tinyint not null default 0 comment '支付方式',
+    total_num smallint not null default 0 comment '总数目',
+    total_amount int not null default 0 comment '总金额，单位分',
+    express_price int not null default 0 comment '运费，单位分',
+    status tinyint not null default 1 comment '支付状态，1：未支付 2：支付中 3：支付完成 4：关闭',
+    create_time datetime not null default CURRENT_TIMESTAMP comment '创建时间',
+    update_time datetime not null default CURRENT_TIMESTAMP comment '修改时间',
+    primary key (order_no)
+)ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+create table order_info_5
+(
+    order_no bigint not null default 0 comment '主键',
+    user_id bigint not null default 0 comment '用户ID',
+    user_addr_id varchar(15) not null default '' comment '地址ID',
+    pay_channel tinyint not null default 0 comment '支付方式',
+    total_num smallint not null default 0 comment '总数目',
+    total_amount int not null default 0 comment '总金额，单位分',
+    express_price int not null default 0 comment '运费，单位分',
+    status tinyint not null default 1 comment '支付状态，1：未支付 2：支付中 3：支付完成 4：关闭',
+    create_time datetime not null default CURRENT_TIMESTAMP comment '创建时间',
+    update_time datetime not null default CURRENT_TIMESTAMP comment '修改时间',
+    primary key (order_no)
+)ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+create table order_info_6
+(
+    order_no bigint not null default 0 comment '主键',
+    user_id bigint not null default 0 comment '用户ID',
+    user_addr_id varchar(15) not null default '' comment '地址ID',
+    pay_channel tinyint not null default 0 comment '支付方式',
+    total_num smallint not null default 0 comment '总数目',
+    total_amount int not null default 0 comment '总金额，单位分',
+    express_price int not null default 0 comment '运费，单位分',
+    status tinyint not null default 1 comment '支付状态，1：未支付 2：支付中 3：支付完成 4：关闭',
+    create_time datetime not null default CURRENT_TIMESTAMP comment '创建时间',
+    update_time datetime not null default CURRENT_TIMESTAMP comment '修改时间',
+    primary key (order_no)
+)ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+create table order_info_7
+(
+    order_no bigint not null default 0 comment '主键',
+    user_id bigint not null default 0 comment '用户ID',
+    user_addr_id varchar(15) not null default '' comment '地址ID',
+    pay_channel tinyint not null default 0 comment '支付方式',
+    total_num smallint not null default 0 comment '总数目',
+    total_amount int not null default 0 comment '总金额，单位分',
+    express_price int not null default 0 comment '运费，单位分',
+    status tinyint not null default 1 comment '支付状态，1：未支付 2：支付中 3：支付完成 4：关闭',
+    create_time datetime not null default CURRENT_TIMESTAMP comment '创建时间',
+    update_time datetime not null default CURRENT_TIMESTAMP comment '修改时间',
+    primary key (order_no)
+)ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+create table order_info_8
+(
+    order_no bigint not null default 0 comment '主键',
+    user_id bigint not null default 0 comment '用户ID',
+    user_addr_id varchar(15) not null default '' comment '地址ID',
+    pay_channel tinyint not null default 0 comment '支付方式',
+    total_num smallint not null default 0 comment '总数目',
+    total_amount int not null default 0 comment '总金额，单位分',
+    express_price int not null default 0 comment '运费，单位分',
+    status tinyint not null default 1 comment '支付状态，1：未支付 2：支付中 3：支付完成 4：关闭',
+    create_time datetime not null default CURRENT_TIMESTAMP comment '创建时间',
+    update_time datetime not null default CURRENT_TIMESTAMP comment '修改时间',
+    primary key (order_no)
+)ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+create table order_info_9
+(
+    order_no bigint not null default 0 comment '主键',
+    user_id bigint not null default 0 comment '用户ID',
+    user_addr_id varchar(15) not null default '' comment '地址ID',
+    pay_channel tinyint not null default 0 comment '支付方式',
+    total_num smallint not null default 0 comment '总数目',
+    total_amount int not null default 0 comment '总金额，单位分',
+    express_price int not null default 0 comment '运费，单位分',
+    status tinyint not null default 1 comment '支付状态，1：未支付 2：支付中 3：支付完成 4：关闭',
+    create_time datetime not null default CURRENT_TIMESTAMP comment '创建时间',
+    update_time datetime not null default CURRENT_TIMESTAMP comment '修改时间',
+    primary key (order_no)
+)ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+create table order_info_10
+(
+    order_no bigint not null default 0 comment '主键',
+    user_id bigint not null default 0 comment '用户ID',
+    user_addr_id varchar(15) not null default '' comment '地址ID',
+    pay_channel tinyint not null default 0 comment '支付方式',
+    total_num smallint not null default 0 comment '总数目',
+    total_amount int not null default 0 comment '总金额，单位分',
+    express_price int not null default 0 comment '运费，单位分',
+    status tinyint not null default 1 comment '支付状态，1：未支付 2：支付中 3：支付完成 4：关闭',
+    create_time datetime not null default CURRENT_TIMESTAMP comment '创建时间',
+    update_time datetime not null default CURRENT_TIMESTAMP comment '修改时间',
+    primary key (order_no)
+)ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+create table order_info_11
+(
+    order_no bigint not null default 0 comment '主键',
+    user_id bigint not null default 0 comment '用户ID',
+    user_addr_id varchar(15) not null default '' comment '地址ID',
+    pay_channel tinyint not null default 0 comment '支付方式',
+    total_num smallint not null default 0 comment '总数目',
+    total_amount int not null default 0 comment '总金额，单位分',
+    express_price int not null default 0 comment '运费，单位分',
+    status tinyint not null default 1 comment '支付状态，1：未支付 2：支付中 3：支付完成 4：关闭',
+    create_time datetime not null default CURRENT_TIMESTAMP comment '创建时间',
+    update_time datetime not null default CURRENT_TIMESTAMP comment '修改时间',
+    primary key (order_no)
+)ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+create table order_info_12
+(
+    order_no bigint not null default 0 comment '主键',
+    user_id bigint not null default 0 comment '用户ID',
+    user_addr_id varchar(15) not null default '' comment '地址ID',
+    pay_channel tinyint not null default 0 comment '支付方式',
+    total_num smallint not null default 0 comment '总数目',
+    total_amount int not null default 0 comment '总金额，单位分',
+    express_price int not null default 0 comment '运费，单位分',
+    status tinyint not null default 1 comment '支付状态，1：未支付 2：支付中 3：支付完成 4：关闭',
+    create_time datetime not null default CURRENT_TIMESTAMP comment '创建时间',
+    update_time datetime not null default CURRENT_TIMESTAMP comment '修改时间',
+    primary key (order_no)
+)ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+create table order_info_13
+(
+    order_no bigint not null default 0 comment '主键',
+    user_id bigint not null default 0 comment '用户ID',
+    user_addr_id varchar(15) not null default '' comment '地址ID',
+    pay_channel tinyint not null default 0 comment '支付方式',
+    total_num smallint not null default 0 comment '总数目',
+    total_amount int not null default 0 comment '总金额，单位分',
+    express_price int not null default 0 comment '运费，单位分',
+    status tinyint not null default 1 comment '支付状态，1：未支付 2：支付中 3：支付完成 4：关闭',
+    create_time datetime not null default CURRENT_TIMESTAMP comment '创建时间',
+    update_time datetime not null default CURRENT_TIMESTAMP comment '修改时间',
+    primary key (order_no)
+)ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+create table order_info_14
+(
+    order_no bigint not null default 0 comment '主键',
+    user_id bigint not null default 0 comment '用户ID',
+    user_addr_id varchar(15) not null default '' comment '地址ID',
+    pay_channel tinyint not null default 0 comment '支付方式',
+    total_num smallint not null default 0 comment '总数目',
+    total_amount int not null default 0 comment '总金额，单位分',
+    express_price int not null default 0 comment '运费，单位分',
+    status tinyint not null default 1 comment '支付状态，1：未支付 2：支付中 3：支付完成 4：关闭',
+    create_time datetime not null default CURRENT_TIMESTAMP comment '创建时间',
+    update_time datetime not null default CURRENT_TIMESTAMP comment '修改时间',
+    primary key (order_no)
+)ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+create table order_info_15
+(
+    order_no bigint not null default 0 comment '主键',
+    user_id bigint not null default 0 comment '用户ID',
+    user_addr_id varchar(15) not null default '' comment '地址ID',
+    pay_channel tinyint not null default 0 comment '支付方式',
+    total_num smallint not null default 0 comment '总数目',
+    total_amount int not null default 0 comment '总金额，单位分',
+    express_price int not null default 0 comment '运费，单位分',
+    status tinyint not null default 1 comment '支付状态，1：未支付 2：支付中 3：支付完成 4：关闭',
+    create_time datetime not null default CURRENT_TIMESTAMP comment '创建时间',
+    update_time datetime not null default CURRENT_TIMESTAMP comment '修改时间',
+    primary key (order_no)
+)ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
