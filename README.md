@@ -1,6 +1,7 @@
 ### 作业1 ### 
 请查看sharding-test项目  
 实现先按订单的创建年月分库到数据库ds202101、ds202102、ds202103、ds202104，再按订单的userID分表到order_info_$->{0..15}  
+- 库表建立语句在/src/main/resources下的sql.txt
 - 配置文件为application.yml
 - 分库的自定义类为com.geek.shardingtest.DatabaseSharding
 - 分表的自定义类为com.geek.shardingtest.TableSharding
